@@ -30,11 +30,7 @@ $(function() {
         } else {
 			//editStyle is a parameter supported by viewEncounterHtmlForm. Refer => openmrs-module-htmlformentryui: org.openmrs.module.htmlformentryui.page.controller.htmlform.ViewEncounterWithHtmlFormPageController#get
             if ("view" == dataMode) {
-            	emr.navigateTo({
-	                provider: "htmlformentryui",
-	                page: "htmlform/viewEncounterWithHtmlForm",
-	                query: { patient: patientId, encounter: encounterId, editStyle: uiStyle}
-	            });
+            	emr.navigateTo({ applicationUrl: actionUrl });
             } else {
             	emr.navigateTo({
 	                provider: "htmlformentryui",
